@@ -11,7 +11,7 @@ async function main() {
   const SYMBOL = "TM"
 
   // Deploy contract
-  const TokenMaster = await ethers.getContractFactory("TokenMaster")
+  const TokenMaster = await hre.ethers.getContractFactory("TokenMaster")
   const tokenMaster = await TokenMaster.deploy(NAME, SYMBOL)
   await tokenMaster.deployed()
 
@@ -20,28 +20,28 @@ async function main() {
   // List 6 events
   const occasions = [
     {
-      name: "UFC Miami",
+      name: "Tomorrow Land",
       cost: tokens(3),
-      tickets: 0,
-      date: "May 31",
+      tickets: 3,
+      date: "Dec 31",
       time: "6:00PM EST",
-      location: "Miami-Dade Arena - Miami, FL"
+      location: "PRC de Schorre Schommelei - Boom, Belgium"
     },
     {
-      name: "ETH Tokyo",
+      name: "BACARDÍ NH7 WEEKENDER",
       cost: tokens(1),
       tickets: 125,
-      date: "Jun 2",
-      time: "1:00PM JST",
-      location: "Tokyo, Japan"
+      date: "Nov 2",
+      time: "1:00PM IST",
+      location: "Mahalaxmi Lawns - Pune, Maharashtra"
     },
     {
-      name: "ETH Privacy Hackathon",
+      name: "Sunburn Festival Goa",
       cost: tokens(0.25),
       tickets: 200,
-      date: "Jun 9",
-      time: "10:00AM TRT",
-      location: "Turkey, Istanbul"
+      date: "Oct 9",
+      time: "10:00AM IST",
+      location: "Hill View Eco Hotel - Vagator, Goa"
     },
     {
       name: "Dallas Mavericks vs. San Antonio Spurs",
